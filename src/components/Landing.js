@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-
+import Item from './Item';
 class Landing extends Component {
-    /* your code here */
-
 
     render() {
-        return {/* your code here */ }
+        return (
+            <div>
+                welcome, {this.props.user}, The hottest item is {this.props.hottest.map(storItem=> <Item item={storItem.item} price={storItem.price} />)}
+                <p></p>
+            </div>
+        )
 
     }
 }
